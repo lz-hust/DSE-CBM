@@ -1,0 +1,15 @@
+multi_scale_conbimamba:
+  input_dim: 768
+  encoder_dim: 256
+  num_layers: 7
+  num_attention_heads: 8
+  feed_forward_expansion_factor: 2
+  conv_expansion_factor: 2
+  input_dropout_p: 0.1
+  feed_forward_dropout_p: 0.1
+  attention_dropout_p: 0.1
+  conv_dropout_p: 0.1
+  # conv_kernel_size: 31
+  conv_kernel_sizes: [15, 31, 63]
+  half_step_residual: true
+  merge_mode: "avg"

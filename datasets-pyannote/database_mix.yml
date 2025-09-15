@@ -1,0 +1,38 @@
+Requirements:
+  - ami/database.yml
+  - msdwild/database.yml
+  - voxconverse/database.yml
+  - alimeeting/database.yml
+  - ramc/database.yml
+  - aishell4/database.yml
+  - EEND/egs/mini_librispeech/v1/data/simu/database.yml
+  
+
+Protocols:
+  X:
+    SpeakerDiarization:
+      DataMamba8:
+        train:
+          MSDWILD.SpeakerDiarization.Custom2: [train]
+          VoxConverse.SpeakerDiarization.Custom1: [train]
+          AliMeeting.SpeakerDiarization.Original: [train]
+          AMI-SDM.SpeakerDiarization.only_words: [train]
+          RAMC.SpeakerDiarization.Full: [train]
+          AISHELL4.SpeakerDiarization.Custom: [train]
+          Simu.SpeakerDiarization.Version1: [train]
+        development:
+          MSDWILD.SpeakerDiarization.Custom2: [development]
+          VoxConverse.SpeakerDiarization.Custom1: [development]
+          AliMeeting.SpeakerDiarization.Original: [development]
+          AMI-SDM.SpeakerDiarization.only_words: [development]
+          RAMC.SpeakerDiarization.Full: [development]
+          AISHELL4.SpeakerDiarization.Custom: [development]
+          Simu.SpeakerDiarization.Version1: [development]
+        test:
+          MSDWILD.SpeakerDiarization.Custom2: [test]
+          VoxConverse.SpeakerDiarization.Custom1: [test]
+          AliMeeting.SpeakerDiarization.Original: [test]
+          AMI-SDM.SpeakerDiarization.only_words: [test]
+          RAMC.SpeakerDiarization.Full: [test]
+          AISHELL4.SpeakerDiarization.Custom: [test]
+          Simu.SpeakerDiarization.Version1: [test]

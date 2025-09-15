@@ -1,0 +1,35 @@
+Databases:
+  AISHELL4: wav/{uri}.flac
+
+Protocols:
+  AISHELL4:
+    SpeakerDiarization:
+      Custom:
+        scope: file
+        train:
+          uri: lists/train.txt
+          annotation: rttm/{uri}.rttm
+          annotated: uems/{uri}.uem
+        development:
+          uri: lists/custom_dev.txt
+          annotation: rttm/{uri}.rttm
+          annotated: uems/{uri}.uem
+        test:
+          uri: lists/test.txt
+          annotation: rttm/{uri}.rttm
+          annotated: uems/{uri}.uem
+      Original:
+        train:
+          uri: lists/train.txt
+          annotation: rttm/{uri}.rttm
+          annotated: uems/{uri}.uem
+        test:
+          uri: lists/test.txt
+          annotation: rttm/{uri}.rttm
+          annotated: uems/{uri}.uem
+      Try:
+        scope: file
+        test:
+          uri: lists/try_test.txt
+          annotation: rttm/{uri}.rttm
+          annotated: uems/{uri}.uem
